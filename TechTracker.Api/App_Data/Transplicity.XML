@@ -1,0 +1,960 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TechTracker.Api</name>
+    </assembly>
+    <members>
+        <member name="T:TechTracker.Api.BundleConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            
+            </summary>
+            <param name="bundles"></param>
+        </member>
+        <member name="T:TechTracker.Api.FilterConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:TechTracker.Api.RouteConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="T:TechTracker.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TechTracker.Api.Startup.OAuthOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TechTracker.Api.Startup.PublicClientId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TechTracker.Api.Startup.UserManagerFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Startup.ConfigureAuth(Owin.IAppBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:TechTracker.Api.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:TechTracker.Api.UnityConfig">
+            <summary>
+                Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.UnityConfig.RegisterTypes(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>Registers the type mappings with the Unity container.</summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>
+                There is no need to register concrete types such as controllers or API controllers (unless you want to
+                change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.
+            </remarks>
+        </member>
+        <member name="M:TechTracker.Api.UnityConfig.GetConfiguredContainer">
+            <summary>
+                Gets the configured Unity container.
+            </summary>
+        </member>
+        <member name="T:TechTracker.Api.UnityWebApiActivator">
+            <summary>Provides the bootstrapping for integrating Unity with WebApi when it is hosted in ASP.NET</summary>
+        </member>
+        <member name="M:TechTracker.Api.UnityWebApiActivator.Start">
+            <summary>Integrates Unity when the application starts.</summary>
+        </member>
+        <member name="M:TechTracker.Api.UnityWebApiActivator.Shutdown">
+            <summary>Disposes the Unity container when the application is shut down.</summary>
+        </member>
+        <member name="T:TechTracker.Api.WebApiConfig">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:TechTracker.Api.WebApiConfig.EnableCamelCaseJson(System.Web.Http.HttpConfiguration)">
+            <summary>
+                Enables indented camelCase for ease of reading.
+            </summary>
+            <param name="config">HttpConfiguration for this api</param>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.AbstractBaseController">
+            <summary>
+            Base class for functionality common to all TX Api Controllers
+            </summary>
+        </member>
+        <member name="P:TechTracker.Api.Controllers.AbstractBaseController.TenantId">
+            <summary>
+            The id of the tenant that was sent to us in the request headers or null if no Tenant was specified.
+            </summary>
+        </member>
+        <member name="P:TechTracker.Api.Controllers.AbstractBaseController.UserName">
+            <summary>
+            User name in the current request. We are getting the Identity value. If there is no user in the Identity, throw an error
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.AbstractBaseController.#ctor(log4net.ILog)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.BaseController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TechTracker.Api.Controllers.BaseController.Log">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.BaseController.#ctor(log4net.ILog)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.FieldPermissionsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IFieldPermissionsService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="fieldPermissionsService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.GetFieldPermissionsByField(System.String)">
+            <summary>
+            GET endpoint to retrieve all the field permissions based on the class name and the current Tenant
+            </summary>
+            <param name="className">The class name</param>
+            <returns>All the field permissions that matches the class name</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.GetFieldPermissionsByTenantAndUser">
+            <summary>
+            GET endpoint to retrieve all the field permissions based on the current user and Tenant
+            </summary>
+            <returns>All the field permissions that matches the current user, the roles that the user are in, and the current Tenant</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.GetAllFieldPermissionsByTenant">
+            <summary>
+            GET endpoint to retrieve all the permissions based on a Tenant
+            </summary>
+            <returns>All the field permissions that matches the given tenant</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.GetFieldPermissionById(System.String)">
+            <summary>
+            GET endpoint to retrieve a field permission
+            </summary>
+            <param name="fieldPermissionId">The Id of the field permission</param>
+            <returns>The field permission that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.PostPermission(TechTracker.Domain.Data.Models.RBAC.FieldPermission)">
+            <summary>
+            POST endpoint to add a new permission
+            </summary>
+            <param name="fieldPermission">The permission object to add</param>
+            <returns>201 Created response and a header with the location of the new permission created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.UpdatePermission(System.String,TechTracker.Domain.Data.Models.RBAC.FieldPermission)">
+            <summary>
+            PUT endpoint to update an existing permission
+            </summary>
+            <param name="fieldPermissionId"></param>
+            <param name="fieldPermission">The object of the new permission body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionsController.DeletePermission(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing permission
+            </summary>
+            <param name="fieldPermissionId">The Id of the permission to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.AccountsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.AccountsController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IAccountsService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="accountsService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.AccountsController.GetAccounts">
+            <summary>
+            GET endpoint to retrieve all the accounts with all the properties that can be securized
+            </summary>
+            <returns>The complete list of accounts</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.AccountsController.GetAccountById(System.String)">
+            <summary>
+            GET endpoint to retrieve a account
+            </summary>
+            <param name="accountId">The Id of the account</param>
+            <returns>The account that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.AccountsController.PostAccount(TechTracker.Domain.Data.Models.Business.Account)">
+            <summary>
+            POST endpoint to add a new account. 
+            </summary>
+            <param name="account">The account object to add</param>
+            <returns>201 Created response and a header with the location of the new account created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.AccountsController.UpdateAccount(System.String,TechTracker.Domain.Data.Models.Business.Account)">
+            <summary>
+            PUT endpoint to update an existing account.
+            </summary>
+            <param name="accountId">The Id of the account to retrieve</param>
+            <param name="account">The object of the new account body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.AccountsController.DeleteAccount(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing permission. 
+            </summary>
+            <param name="accountId">The Id of the permission to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.OpportunitiesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IOpportunitiesService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="opportunitiesService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.GetOpportunities">
+            <summary>
+            GET endpoint to retrieve all the opportunities with all the properties that can be securized
+            </summary>
+            <returns>The complete list of opportunities</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.GetOpportunityById(System.String)">
+            <summary>
+            GET endpoint to retrieve an opportunity
+            </summary>
+            <param name="oppId">The Id of the opportunity</param>
+            <returns>The opportunity that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.PostOpportunity(TechTracker.Domain.Data.Models.Business.Opportunity)">
+            <summary>
+            POST endpoint to add a new opportunity. 
+            </summary>
+            <param name="opp">The opportunity object to add</param>
+            <returns>201 Created response and a header with the location of the new opportunity created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.UpdateOpportunity(System.String,TechTracker.Domain.Data.Models.Business.Opportunity)">
+            <summary>
+            PUT endpoint to update an existing opportunity.
+            </summary>
+            <param name="oppId">The Id of the opportunity to retrieve</param>
+            <param name="opp">The object of the new opportunity body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.DeleteOpportunity(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing permission. 
+            </summary>
+            <param name="oppId">The Id of the permission to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.AddSkill(System.String,TechTracker.Domain.Data.Models.Business.Skill)">
+            <summary>
+            
+            </summary>
+            <param name="oppId"></param>
+            <param name="skill"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.OpportunitiesController.RemoveSkill(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oppId"></param>
+            <param name="skillId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.CandidatesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.CandidatesController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.ICandidatesService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="candidatesService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.CandidatesController.GetCandidates">
+            <summary>
+            GET endpoint to retrieve all the candidates with all the properties that can be securized
+            </summary>
+            <returns>The complete list of candidates</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.CandidatesController.GetCandidateById(System.String)">
+            <summary>
+            GET endpoint to retrieve a candidate
+            </summary>
+            <param name="candidateId">The Id of the candidate</param>
+            <returns>The candidate that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.CandidatesController.PostCandidate(TechTracker.Domain.Data.Models.Business.Candidate)">
+            <summary>
+            POST endpoint to add a new candidate. 
+            </summary>
+            <param name="candidate">The candidate object to add</param>
+            <returns>201 Created response and a header with the location of the new candidate created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.CandidatesController.UpdateCandidate(System.String,TechTracker.Domain.Data.Models.Business.Candidate)">
+            <summary>
+            PUT endpoint to update an existing candidate.
+            </summary>
+            <param name="candidateId">The Id of the candidate to retrieve</param>
+            <param name="candidate">The object of the new candidate body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.CandidatesController.DeleteCandidate(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing permission. 
+            </summary>
+            <param name="candidateId">The Id of the permission to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.SummaryController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SummaryController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.ISummaryService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="summaryService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SummaryController.GetSummary">
+            <summary>
+            GET endpoint to retrieve all the summary
+            </summary>
+            <returns>The complete list of summary</returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.SkillsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SkillsController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.ISkillsService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="skillsService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SkillsController.GetSkills">
+            <summary>
+            GET endpoint to retrieve all the skills with all the properties that can be securized
+            </summary>
+            <returns>The complete list of skills</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SkillsController.GetSkillById(System.String)">
+            <summary>
+            GET endpoint to retrieve a skill
+            </summary>
+            <param name="skillId">The Id of the skill</param>
+            <returns>The skill that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SkillsController.PostSkill(TechTracker.Domain.Data.Models.Business.Skill)">
+            <summary>
+            POST endpoint to add a new skill. 
+            </summary>
+            <param name="skill">The skill object to add</param>
+            <returns>201 Created response and a header with the location of the new skill created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SkillsController.UpdateSkill(System.String,TechTracker.Domain.Data.Models.Business.Skill)">
+            <summary>
+            PUT endpoint to update an existing skill.
+            </summary>
+            <param name="skillId">The Id of the skill to retrieve</param>
+            <param name="skill">The object of the new skill body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.SkillsController.DeleteSkill(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing permission. 
+            </summary>
+            <param name="skillId">The Id of the permission to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.FieldPermissionTypesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionTypesController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IFieldPermissionTypesService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="fieldPermissionTypesService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionTypesController.GetFieldPermissionTypes">
+            <summary>
+            GET endpoint to retrieve all the field permission types with all the properties that can be securized
+            </summary>
+            <returns>The complete list of field permission types</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionTypesController.GetFieldPermissionTypeById(System.String)">
+            <summary>
+            GET endpoint to retrieve a field permission type
+            </summary>
+            <param name="fieldPermissionTypeId">The Id of the field permission type</param>
+            <returns>The field permission type that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionTypesController.PostFieldPermissionType(TechTracker.Domain.Data.Models.RBAC.FieldPermissionType)">
+            <summary>
+            POST endpoint to add a new field permission type. Can be executed only by people in the Main Roles collection "Admin"
+            </summary>
+            <param name="fieldPermissionType">The field permission type object to add</param>
+            <returns>201 Created response and a header with the location of the new field permission type created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionTypesController.UpdateFieldPermissionType(System.String,TechTracker.Domain.Data.Models.RBAC.FieldPermissionType)">
+            <summary>
+            PUT endpoint to update an existing field permission type. Can be executed only by people in the Main Roles collection "Admin"
+            </summary>
+            <param name="fieldPermissionTypeId">The Id of the field permission type to retrieve</param>
+            <param name="fieldPermissionType">The object of the new field permission type body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.FieldPermissionTypesController.DeleteFieldPermissionType(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing permission. Can be executed only by people in the Main Roles collection "Admin"
+            </summary>
+            <param name="fieldPermissionTypeId">The Id of the permission to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.PermissionsController">
+            <summary>
+            This controller will manage the permissions for the whole application
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.PermissionsController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IPermissionsService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="permissionsService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.PermissionsController.GetPermissions">
+            <summary>
+            GET endpoint to retrieve permissions
+            </summary>
+            <returns>Returns all the permissions</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.PermissionsController.GetPermission(System.String)">
+            <summary>
+            GET endpoint to retrieve a permission
+            </summary>
+            <param name="permId">The Id of the permission</param>
+            <returns>The permission that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.PermissionsController.PostPermission(TechTracker.Domain.Data.Models.RBAC.Permission)">
+            <summary>
+            POST endpoint to add a new permission. Can be executed only by people in the Main Roles collection "Admin"
+            </summary>
+            <param name="permission">The permission object to add</param>
+            <returns>201 Created response and a header with the location of the new permission created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.PermissionsController.UpdatePermission(System.String,TechTracker.Domain.Data.Models.RBAC.Permission)">
+            <summary>
+            PUT endpoint to update an existing permission. Can be executed only by people in the Main Roles collection "Admin"
+            </summary>
+            <param name="permId">The Id of the permission to update</param>
+            <param name="permission">The object of the new permission body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.PermissionsController.DeletePermission(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing permission. Can be executed only by people in the Main Roles collection "Admin"
+            </summary>
+            <param name="permId">The Id of the permission to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.RoleController">
+            <summary>
+            Controller to manage the roles by tenant
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IRolesService,TechTracker.Services.Interfaces.IUserProfileService,TechTracker.Services.Interfaces.IPermissionsService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="rolesService">Roles service to be injected</param>
+            <param name="userProfileService"></param>
+            <param name="permissionsService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.AddRoleAsync(TechTracker.Domain.Data.Models.RBAC.Role)">
+            <summary>
+            POST endpoint to add a new role to a tenant
+            </summary>
+            <param name="role">The role object to add</param>
+            <returns>201 Created response and a header with the location of the new role created</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.GetRolesAsync">
+            <summary>
+            GET endpoint to retrieve roles
+            </summary>
+            <returns>Returns all the roles for current Tenant</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.GetRoleAsync(System.String)">
+            <summary>
+            GET endpoint to retrieve a role from a tenant
+            </summary>
+            <param name="roleId">The Id of the role</param>
+            <returns>The role that matches the given Id</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.UpdateRoleAsync(System.String,TechTracker.Domain.Data.Models.RBAC.Role)">
+            <summary>
+            PUT endpoint to update an existing role into a tenant
+            </summary>
+            <param name="roleId">The Id of the role to update</param>
+            <param name="role">The object of the new role body</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.DeleteRole(System.String)">
+            <summary>
+            DELETE endpoint to delete and existing role from a tenant
+            </summary>
+            <param name="roleId">The Id of the role to delete</param>
+            <returns>200 Ok status if everything went well</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.AddPermissionToRoleAsync(System.String,System.String)">
+            <summary>
+            POST endpoint to add a permission to a Tenant role
+            </summary>
+            <param name="roleId">The Id of the role to update</param>
+            <param name="permId">The Id of the permission to add</param>
+            <returns>The updated role object</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.RemovePermissionFromRoleAsync(System.String,System.String)">
+            <summary>
+            POST endpoint to delete a permission from a Tenant role
+            </summary>
+            <param name="roleId">The Id of the role to update</param>
+            <param name="permId">The Id of the permission to remove</param>
+            <returns>The updated role object</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.AddUserToARoleAsync(System.String,System.String)">
+            <summary>
+            POST endpoint to add a user to a Tenant role
+            </summary>
+            <param name="roleId">The Id of the role to update</param>
+            <param name="userId">The Id of the user to add</param>
+            <returns>The updated role object</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.RemoveUserToARoleAsync(System.String,System.String)">
+            <summary>
+            POST endpoint to remove a user from a Tenant role
+            </summary>
+            <param name="roleId">The Id of the role to update</param>
+            <param name="userId">The Id of the user to remove</param>
+            <returns>The updated role object</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.RoleController.GetUserRoles(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.UserProfileController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IUserProfileService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="userProfileServices"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.GetUserInfo">
+            <summary>
+            Gets the information of the current user (if logged in)
+            </summary>
+            <returns>The username and the provider</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.GetExternalLogin(System.String,System.String)">
+            <summary>
+            Login with an external provider
+            </summary>
+            <param name="provider"></param>
+            <param name="error"></param>
+            <returns>HTTP Code with result of the operation. 200 if successful</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.Logout">
+            <summary>
+            Logs out of the application (removes the cookie or valid token)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.ChangePassword(TechTracker.Domain.Data.Identity.ChangePasswordModel)">
+            <summary>
+            Changes the password of an user
+            </summary>
+            <param name="model">An object with the current password and the new and its confirmation</param>
+            <returns>HTTP Code with result of the operation. 200 if successful</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.SetPassword(TechTracker.Domain.Data.Identity.SetPasswordModel)">
+            <summary>
+            Sets the password of an user
+            </summary>
+            <param name="model">An object with the new password and its confirmation</param>
+            <returns>HTTP Code with result of the operation. 200 if successful</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.GetManageInfo(System.String,System.Boolean)">
+            <summary>
+            Returns all the information needed to manage the user info
+            </summary>
+            <param name="returnUrl">The url where to go after retrieving the data</param>
+            <param name="generateState"></param>
+            <returns>A list with all the Login Information about the user, like the logins (internal or external) associated to the current user</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.GetExternalLogins(System.String,System.Boolean)">
+            <summary>
+            Retrieve the list of External Logins availables
+            </summary>
+            <param name="returnUrl">The Url to return after login</param>
+            <param name="generateState">By default false. If true, it generates a random OAuth State to be used in the returned objects</param>
+            <returns>A list of ExternalLoginView with the Provider, Response_Type, Client_Id, Redirect_Uri and State fields</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.AddExternalLogin(TechTracker.Domain.Data.Identity.AddExternalLoginModel)">
+            <summary>
+            Adds a new external login for a given user
+            </summary>
+            <param name="model">Provides a token with the external login</param>
+            <returns>HTTP Code with result of the operation. 200 if successful</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.RemoveLogin(TechTracker.Domain.Data.Identity.RemoveLoginModel)">
+             <summary>
+             Removes a login provider from a user
+            </summary>
+            <param name="model"></param>
+            <returns>HTTP Code with result of the operation. 200 if successful</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.CheckIfExternalUserExists">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.RememberMe(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.Preregistration(TechTracker.Domain.Data.Identity.PreRegisteredUser)">
+            <summary>
+            Register an user contained in the RegisterBindingModel provided
+            </summary>
+            <param name="model">An object of the kind RegisterBindingModel</param>
+            <returns>An HTTP Code:
+                        200: Registered if the user has been registered successfully 
+                        or Http Error Code if not registered</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.GetRegistration(System.String)">
+            <summary>
+            Retrieve preregistered user based on the token
+            </summary>
+            <param name="token">The token to retrieve the pre registration user data</param>
+            <returns>A list of ExternalLoginView with the Provider, Response_Type, Client_Id, Redirect_Uri and State fields</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.UpdateRegistrationWithPreregistion(TechTracker.Domain.Data.Identity.RegisterModel)">
+            <summary>
+            Register an user contained in the RegisterBindingModel provided
+            </summary>
+            <param name="model">An object of the kind RegisterBindingModel</param>
+            <returns>An HTTP Code:
+                        200: Registered if the user has been registered successfully 
+                        or Http Error Code if not registered</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.CheckUsername(System.String)">
+            <summary>
+            Function to check if the user name is valid
+            </summary>
+            <param name="name">User name to check</param>
+            <returns>Ok if the username is valid</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.UpdateRegistrationWithExternalProvider(TechTracker.Domain.Data.Identity.RegisterModel)">
+            <summary>
+            This method is used when a user registers from an external provider, the main difference being the required authorization, and removal of the RegisterUser method.
+            </summary>
+            <param name="model">The model to map to the ApplicationUser</param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.DeactivateRegistration(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="preRegisterToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.Register(TechTracker.Domain.Data.Identity.RegisterModel)">
+            <summary>
+            Register an user contained in the RegisterViewModel provided
+            </summary>
+            <param name="model">An object of the kind RegisterBindingModel</param>
+            <returns>An HTTP Code:
+                        200: Registered if the user has been registered successfully 
+                        or Http Error Code if not registered</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.DeleteUser(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.GetProfile">
+            <summary>
+            Gets the profile data of the current user. If the current user is not found,returns a 204 (NotFound)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.EditProfile(TechTracker.Domain.Data.Identity.RegisterModel)">
+            <summary>
+            Updates the profile sent in the body
+            </summary>
+            <param name="model">Content of the profile to update</param>
+            <returns>IHttpActionResult</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.GetProfile(System.String)">
+            <summary>
+            Gets the profile of a user
+            </summary>
+            <param name="username">The user name to get his profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.PutProfile(System.String,TechTracker.Domain.Data.Identity.RegisterModel)">
+            <summary>
+            Updates a profile
+            </summary>
+            <param name="id">The username's id to update his profile</param>
+            <param name="model">The object with the user profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UserProfileController.AddUserToRole(System.String,System.String)">
+            <summary>
+            Adds a user to a role
+            </summary>
+            <param name="userId">The Id of the User</param>
+            <param name="role">The role</param>
+            <returns></returns>
+        </member>
+        <member name="T:TechTracker.Api.Controllers.UsersController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.#ctor(log4net.ILog,TechTracker.Services.Interfaces.IUserProfileService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="userProfileService"></param>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.GetProfiles">
+            <summary>
+            Returns the complete list of users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.GetUserProfile(System.String)">
+            <summary>
+            Returns a user object.
+            To use this endpoint, you need to be a user of the system and you will be able to call to your own data.
+            
+            The request to this endpoint, should have only one header, the Authorization, this will include as a value a Bearer token.
+            
+            So, a typical request to this endpoint, could be:
+            
+            GET http://serveraddress/api/Users/xxxxxxxx  (where xxxxxxxx is your userId)
+            
+            Authorization: Bearer joJnpcD0kBBgF6C4KIJDi9GL1zdY_jgW5dXl9dYTbdrmpf (...)
+            </summary>
+            <returns>A Json object with an ApplicationUser model.
+            
+            If you are not the user you are requesting, and that is checked in the server comparing the user in the token with the user you are asking for, you will receive an Unauthorized (404) response</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.GetUserProfileByName(System.String)">
+            <summary>
+            Returns a user by his name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.AddUser(TechTracker.Domain.Data.Identity.RegisterModel)">
+            <summary>
+            Adds a new user
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.UpdateUser(System.String,TechTracker.Domain.Data.Identity.ApplicationUser)">
+            <summary>
+            Adds a new user
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.DeleteUser(System.String)">
+            <summary>
+            Deletes an existing user
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.SetToSuper(System.String)">
+            <summary>
+            Sets a user as SuperAdmin
+            </summary>
+            <param name="userId">The Id of the user</param>
+            <returns>The user object updated</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.SetToNormal(System.String)">
+            <summary>
+            Removes a user from the super admin group
+            </summary>
+            <param name="userId">The Id of the user</param>
+            <returns>The user object updated</returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.ChangePassword(System.String,TechTracker.Domain.Data.Identity.ChangePasswordModel)">
+            <summary>
+            Changes a user password
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.SetPassword(System.String,TechTracker.Domain.Data.Identity.SetPasswordModel)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.RememberMe(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="callbackUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TechTracker.Api.Controllers.UsersController.SetPassword(TechTracker.Domain.Data.Identity.SetPasswordModel)">
+            <summary>
+            Sets a new password for the user, based on a token received by email
+            </summary>
+            <param name="model">The object model with user, password and the token</param>
+            <returns></returns>
+        </member>
+        <member name="T:TechTracker.Api.WebApiApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.WebApiApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TechTracker.Api.Results.ChallengeResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Results.ChallengeResult.#ctor(System.String,System.Web.Http.ApiController)">
+            <summary>
+            
+            </summary>
+            <param name="loginProvider"></param>
+            <param name="controller"></param>
+        </member>
+        <member name="P:TechTracker.Api.Results.ChallengeResult.LoginProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TechTracker.Api.Results.ChallengeResult.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TechTracker.Api.Results.ChallengeResult.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,24 @@
+﻿@using System.Reflection
+@using System.Web.Hosting
+@{
+    ViewBag.Title = "Accenture TechTracker API Home Page";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">TechTracker Release 0</h3>
+        @{
+            var path = HostingEnvironment.ApplicationPhysicalPath;
+            var assembly = Assembly.LoadFrom(path + "bin\\TechTracker.Api.dll");
+            var ver = assembly.GetName().Version;
+        }
+
+        <h1>@ver</h1>
+    </div>
+    <div class="panel-body">
+        <p>Echo Sprint 1.</p>
+
+
+        <p class="navbar-fixed-bottom bottom">Accenture 2016 TechTracker</p>
+    </div>
+</div>

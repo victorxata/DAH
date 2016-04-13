@@ -1,0 +1,219 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{BAC29965-762F-4A12-BB39-1C1943ADDF40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{16234551-3B19-43DF-8476-F940E14D4DA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Repositories", "4. Repositories", "{118666F7-E6F1-407D-8E22-E00393C9973E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Services", "2. Services", "{D14CD9D8-CDD9-4DBC-9ADB-4E64820EF548}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Common", "5. Common", "{44E20A51-BBFB-43CB-A78B-C32795419F19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Api", "TechTracker.Api\TechTracker.Api.csproj", "{3397D0D7-EBB8-406A-A6F3-CD8382468F0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Api.Common", "TechTracker.Api.Common\TechTracker.Api.Common.csproj", "{FE759572-D9FE-402D-AAF6-0163AF5C186E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Api.HelpPage", "TechTracker.Api.HelpPage\TechTracker.Api.HelpPage.csproj", "{E628AC1C-3E56-467B-A108-086941D53280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Common.Mailer", "TechTracker.Common.Mailer\TechTracker.Common.Mailer.csproj", "{B2475931-2711-4964-8501-2346B001E2FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Common.Tracer", "TechTracker.Common.Tracer\TechTracker.Common.Tracer.csproj", "{C4285686-4F58-455C-BFAE-0A00602E95F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Common.Utils", "TechTracker.Common.Utils\TechTracker.Common.Utils.csproj", "{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Domain.Data.Core", "TechTracker.Domain.Data.Core\TechTracker.Domain.Data.Core.csproj", "{0DCE2552-6471-4710-A006-E92CB9B60EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Domain.Data.Identity", "TechTracker.Domain.Data.Identity\TechTracker.Domain.Data.Identity.csproj", "{54F6C38D-F433-40C3-A850-26F6D6DDDFC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Domain.Data.Models", "TechTracker.Domain.Data.Models\TechTracker.Domain.Data.Models.csproj", "{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Repositories.Interfaces", "TechTracker.Repositories.Interfaces\TechTracker.Repositories.Interfaces.csproj", "{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Services", "TechTracker.Services\TechTracker.Services.csproj", "{738D7E2B-303B-4FC7-A648-690F42F65F4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Services.Interfaces", "TechTracker.Services.Interfaces\TechTracker.Services.Interfaces.csproj", "{7B4D8C97-2008-4008-8A45-B07C7F53353B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTracker.Repositories.MongoDb", "TechTracker.Repositories.MongoDb\TechTracker.Repositories.MongoDb.csproj", "{0D52987F-52C3-42D5-9240-301C18D7BDE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Modeling", "0. Modeling", "{6E39A48E-6ED2-41CB-952D-5391BB77578A}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "TechTracker.Modeling", "TechTracker.Modeling\TechTracker.Modeling.modelproj", "{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3397D0D7-EBB8-406A-A6F3-CD8382468F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3397D0D7-EBB8-406A-A6F3-CD8382468F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3397D0D7-EBB8-406A-A6F3-CD8382468F0B}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{3397D0D7-EBB8-406A-A6F3-CD8382468F0B}.QA|Any CPU.Build.0 = QA|Any CPU
+		{3397D0D7-EBB8-406A-A6F3-CD8382468F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3397D0D7-EBB8-406A-A6F3-CD8382468F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE759572-D9FE-402D-AAF6-0163AF5C186E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE759572-D9FE-402D-AAF6-0163AF5C186E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE759572-D9FE-402D-AAF6-0163AF5C186E}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{FE759572-D9FE-402D-AAF6-0163AF5C186E}.QA|Any CPU.Build.0 = QA|Any CPU
+		{FE759572-D9FE-402D-AAF6-0163AF5C186E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE759572-D9FE-402D-AAF6-0163AF5C186E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E628AC1C-3E56-467B-A108-086941D53280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E628AC1C-3E56-467B-A108-086941D53280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E628AC1C-3E56-467B-A108-086941D53280}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{E628AC1C-3E56-467B-A108-086941D53280}.QA|Any CPU.Build.0 = QA|Any CPU
+		{E628AC1C-3E56-467B-A108-086941D53280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E628AC1C-3E56-467B-A108-086941D53280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2475931-2711-4964-8501-2346B001E2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2475931-2711-4964-8501-2346B001E2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2475931-2711-4964-8501-2346B001E2FD}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{B2475931-2711-4964-8501-2346B001E2FD}.QA|Any CPU.Build.0 = QA|Any CPU
+		{B2475931-2711-4964-8501-2346B001E2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2475931-2711-4964-8501-2346B001E2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4285686-4F58-455C-BFAE-0A00602E95F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4285686-4F58-455C-BFAE-0A00602E95F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4285686-4F58-455C-BFAE-0A00602E95F5}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{C4285686-4F58-455C-BFAE-0A00602E95F5}.QA|Any CPU.Build.0 = QA|Any CPU
+		{C4285686-4F58-455C-BFAE-0A00602E95F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4285686-4F58-455C-BFAE-0A00602E95F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4}.QA|Any CPU.Build.0 = QA|Any CPU
+		{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCE2552-6471-4710-A006-E92CB9B60EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCE2552-6471-4710-A006-E92CB9B60EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCE2552-6471-4710-A006-E92CB9B60EAC}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{0DCE2552-6471-4710-A006-E92CB9B60EAC}.QA|Any CPU.Build.0 = QA|Any CPU
+		{0DCE2552-6471-4710-A006-E92CB9B60EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCE2552-6471-4710-A006-E92CB9B60EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F6C38D-F433-40C3-A850-26F6D6DDDFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F6C38D-F433-40C3-A850-26F6D6DDDFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F6C38D-F433-40C3-A850-26F6D6DDDFC5}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{54F6C38D-F433-40C3-A850-26F6D6DDDFC5}.QA|Any CPU.Build.0 = QA|Any CPU
+		{54F6C38D-F433-40C3-A850-26F6D6DDDFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F6C38D-F433-40C3-A850-26F6D6DDDFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9}.QA|Any CPU.Build.0 = QA|Any CPU
+		{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2}.QA|Any CPU.Build.0 = QA|Any CPU
+		{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{738D7E2B-303B-4FC7-A648-690F42F65F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{738D7E2B-303B-4FC7-A648-690F42F65F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{738D7E2B-303B-4FC7-A648-690F42F65F4E}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{738D7E2B-303B-4FC7-A648-690F42F65F4E}.QA|Any CPU.Build.0 = QA|Any CPU
+		{738D7E2B-303B-4FC7-A648-690F42F65F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{738D7E2B-303B-4FC7-A648-690F42F65F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4D8C97-2008-4008-8A45-B07C7F53353B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4D8C97-2008-4008-8A45-B07C7F53353B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4D8C97-2008-4008-8A45-B07C7F53353B}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{7B4D8C97-2008-4008-8A45-B07C7F53353B}.QA|Any CPU.Build.0 = QA|Any CPU
+		{7B4D8C97-2008-4008-8A45-B07C7F53353B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4D8C97-2008-4008-8A45-B07C7F53353B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D52987F-52C3-42D5-9240-301C18D7BDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D52987F-52C3-42D5-9240-301C18D7BDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D52987F-52C3-42D5-9240-301C18D7BDE2}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{0D52987F-52C3-42D5-9240-301C18D7BDE2}.QA|Any CPU.Build.0 = QA|Any CPU
+		{0D52987F-52C3-42D5-9240-301C18D7BDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D52987F-52C3-42D5-9240-301C18D7BDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD}.QA|Any CPU.Build.0 = Release|Any CPU
+		{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3397D0D7-EBB8-406A-A6F3-CD8382468F0B} = {BAC29965-762F-4A12-BB39-1C1943ADDF40}
+		{FE759572-D9FE-402D-AAF6-0163AF5C186E} = {BAC29965-762F-4A12-BB39-1C1943ADDF40}
+		{E628AC1C-3E56-467B-A108-086941D53280} = {BAC29965-762F-4A12-BB39-1C1943ADDF40}
+		{B2475931-2711-4964-8501-2346B001E2FD} = {44E20A51-BBFB-43CB-A78B-C32795419F19}
+		{C4285686-4F58-455C-BFAE-0A00602E95F5} = {44E20A51-BBFB-43CB-A78B-C32795419F19}
+		{29AD490B-5DE7-4F9A-BAC0-A0188BF0DFB4} = {44E20A51-BBFB-43CB-A78B-C32795419F19}
+		{0DCE2552-6471-4710-A006-E92CB9B60EAC} = {16234551-3B19-43DF-8476-F940E14D4DA1}
+		{54F6C38D-F433-40C3-A850-26F6D6DDDFC5} = {16234551-3B19-43DF-8476-F940E14D4DA1}
+		{7B7FB9F6-5512-40C5-9382-4E4D5A9F89E9} = {16234551-3B19-43DF-8476-F940E14D4DA1}
+		{A5E2F3D1-DB06-45BD-961E-7DC69F9190F2} = {118666F7-E6F1-407D-8E22-E00393C9973E}
+		{738D7E2B-303B-4FC7-A648-690F42F65F4E} = {D14CD9D8-CDD9-4DBC-9ADB-4E64820EF548}
+		{7B4D8C97-2008-4008-8A45-B07C7F53353B} = {D14CD9D8-CDD9-4DBC-9ADB-4E64820EF548}
+		{0D52987F-52C3-42D5-9240-301C18D7BDE2} = {118666F7-E6F1-407D-8E22-E00393C9973E}
+		{FDB103D4-1D1E-4BFE-9DAC-EB56DCFB45CD} = {6E39A48E-6ED2-41CB-952D-5391BB77578A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 15
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://irugaz.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TechTracker.Api.Common\\TechTracker.Api.Common.csproj
+		SccProjectTopLevelParentUniqueName1 = TechTracker.sln
+		SccProjectName1 = TechTracker.Api.Common
+		SccLocalPath1 = TechTracker.Api.Common
+		SccProjectUniqueName2 = TechTracker.Api.HelpPage\\TechTracker.Api.HelpPage.csproj
+		SccProjectTopLevelParentUniqueName2 = TechTracker.sln
+		SccProjectName2 = TechTracker.Api.HelpPage
+		SccLocalPath2 = TechTracker.Api.HelpPage
+		SccProjectUniqueName3 = TechTracker.Api\\TechTracker.Api.csproj
+		SccProjectTopLevelParentUniqueName3 = TechTracker.sln
+		SccProjectName3 = TechTracker.Api
+		SccLocalPath3 = TechTracker.Api
+		SccProjectUniqueName4 = TechTracker.Common.Mailer\\TechTracker.Common.Mailer.csproj
+		SccProjectTopLevelParentUniqueName4 = TechTracker.sln
+		SccProjectName4 = TechTracker.Common.Mailer
+		SccLocalPath4 = TechTracker.Common.Mailer
+		SccProjectUniqueName5 = TechTracker.Common.Tracer\\TechTracker.Common.Tracer.csproj
+		SccProjectTopLevelParentUniqueName5 = TechTracker.sln
+		SccProjectName5 = TechTracker.Common.Tracer
+		SccLocalPath5 = TechTracker.Common.Tracer
+		SccProjectUniqueName6 = TechTracker.Common.Utils\\TechTracker.Common.Utils.csproj
+		SccProjectTopLevelParentUniqueName6 = TechTracker.sln
+		SccProjectName6 = TechTracker.Common.Utils
+		SccLocalPath6 = TechTracker.Common.Utils
+		SccProjectUniqueName7 = TechTracker.Domain.Data.Core\\TechTracker.Domain.Data.Core.csproj
+		SccProjectTopLevelParentUniqueName7 = TechTracker.sln
+		SccProjectName7 = TechTracker.Domain.Data.Core
+		SccLocalPath7 = TechTracker.Domain.Data.Core
+		SccProjectUniqueName8 = TechTracker.Domain.Data.Identity\\TechTracker.Domain.Data.Identity.csproj
+		SccProjectTopLevelParentUniqueName8 = TechTracker.sln
+		SccProjectName8 = TechTracker.Domain.Data.Identity
+		SccLocalPath8 = TechTracker.Domain.Data.Identity
+		SccProjectUniqueName9 = TechTracker.Domain.Data.Models\\TechTracker.Domain.Data.Models.csproj
+		SccProjectTopLevelParentUniqueName9 = TechTracker.sln
+		SccProjectName9 = TechTracker.Domain.Data.Models
+		SccLocalPath9 = TechTracker.Domain.Data.Models
+		SccProjectUniqueName10 = TechTracker.Modeling\\TechTracker.Modeling.modelproj
+		SccProjectTopLevelParentUniqueName10 = TechTracker.sln
+		SccProjectName10 = TechTracker.Modeling
+		SccLocalPath10 = TechTracker.Modeling
+		SccProjectUniqueName11 = TechTracker.Repositories.Interfaces\\TechTracker.Repositories.Interfaces.csproj
+		SccProjectTopLevelParentUniqueName11 = TechTracker.sln
+		SccProjectName11 = TechTracker.Repositories.Interfaces
+		SccLocalPath11 = TechTracker.Repositories.Interfaces
+		SccProjectUniqueName12 = TechTracker.Repositories.MongoDb\\TechTracker.Repositories.MongoDb.csproj
+		SccProjectTopLevelParentUniqueName12 = TechTracker.sln
+		SccProjectName12 = TechTracker.Repositories.MongoDb
+		SccLocalPath12 = TechTracker.Repositories.MongoDb
+		SccProjectUniqueName13 = TechTracker.Services.Interfaces\\TechTracker.Services.Interfaces.csproj
+		SccProjectTopLevelParentUniqueName13 = TechTracker.sln
+		SccProjectName13 = TechTracker.Services.Interfaces
+		SccLocalPath13 = TechTracker.Services.Interfaces
+		SccProjectUniqueName14 = TechTracker.Services\\TechTracker.Services.csproj
+		SccProjectTopLevelParentUniqueName14 = TechTracker.sln
+		SccProjectName14 = TechTracker.Services
+		SccLocalPath14 = TechTracker.Services
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1cd8b935-c6b6-44c5-9fca-5f94411533e6" name="TechTracker" linkedPackageId="ca4c64a0-e82a-462c-939e-d51605dc4863" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b03408c5-2183-4537-bdbb-03c183866d3b">
+      <profileInstance Id="d633a2bf-f18d-4722-96bf-89a232075947" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6030e59d-bc53-48a7-8318-5daee6b79fae">
+      <profileInstance Id="356ac363-dcae-40ed-a833-96816688d7b3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4ceeb021-d1dd-49e8-a3d1-ade819c1868b" name="Candidate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1124b85d-5c7b-4d28-9486-bef98cc26fc4" />
+        <targetEnds>
+          <association Id="75ccf134-adb2-4d9a-9327-e7ccd04a7136" isDerived="false" sourceEndRoleName="Candidate" targetEndRoleName="Skill" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d641880e-38d5-4cdd-ac25-71df823f8e81" LastKnownName="Skill" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="17c5dceb-e95e-446b-860f-1243f7aa723c" name="Candidate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fa661848-b3e0-43e0-adee-076aada29b90" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="65d0463c-d242-4ad4-802b-12a74cd10d97" name="Skill" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="33409cda-c2f0-49c0-81e7-a5ba6494989a" name="Lower" value="*">
+                      <elementDefinition Id="65860aca-dd49-401b-b2ad-4370019a5023" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8dc5c307-5418-453f-a631-fb022c701b46" name="Upper" value="*">
+                      <elementDefinition Id="f5a57b55-3854-49ee-a464-dc6ad43647ed" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="99a3ed4d-ebe2-45ed-9fe2-6ca20b9a2e56" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d8415876-e2dd-4887-87ad-1cd3489fe835" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="1676b65e-8ba1-48df-9d0b-926d65440def" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6c9cd3e1-bca5-4df6-9405-3184f2db094f" />
+          </property>
+          <property Id="7372baac-e273-4cbd-8fa8-2e6439f46e9b" name="Address" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6e8e891e-98e0-4d29-bc07-6203f0a2e278" />
+          </property>
+          <property Id="7d5307bc-dee4-4334-8cd7-c56925174a28" name="ContactedBy" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7d7483ca-523f-47a7-83a8-6aabc59ef62b" />
+          </property>
+          <property Id="52cf0845-5321-43e0-a3f8-fc0c1440bdb5" name="ContactedAt" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4182f293-80ae-41a5-9b1b-7c16826ce7cb" />
+          </property>
+          <property Id="9e2bee6c-9e96-4b5b-ad4e-8527f7a03b0b" name="Skills" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3eeae3f9-e6d1-455e-8346-66be3c99b0cc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cc89716c-a3f4-4972-92ed-c4b38bd646ed" LastKnownName="List&lt;Skill&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="f3bf6d38-5dd5-476c-af96-8190d77331e6" name="CandidateId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="70116fee-8968-43c3-befa-18b2af51d764" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="06dcfbc4-405c-4181-947c-ebaad8105607" name="AddSkill" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="725aa0bf-6754-4ca6-8f9b-f8311d635490" />
+          </operation>
+          <operation Id="913ddf1d-81a6-4fc2-a848-e6081301d6d7" name="RemoveSkill" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3770c557-0372-4774-ab34-f0c291a71de1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d641880e-38d5-4cdd-ac25-71df823f8e81" name="Skill" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f8847d6f-38d8-4948-bcde-eeac6ad68a05" />
+        <ownedAttributesInternal>
+          <property Id="037c5914-dbc9-4aef-bb72-23fae6e93981" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4763b460-163a-4af5-a49d-2a4396011e88" />
+          </property>
+          <property Id="11a4bc99-f36c-487e-9f22-8936fffb98b7" name="SkillId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="80f0ba16-7e0e-472b-b785-8147c815413a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="cc89716c-a3f4-4972-92ed-c4b38bd646ed" name="List&lt;Skill&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Skill&gt;">
+        <elementDefinition Id="38a2c5c8-5fd4-4576-b3eb-efe9bd77803c" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="ca4c64a0-e82a-462c-939e-d51605dc4863" name="TechTracker.Modeling">
+    <elementDefinition Id="98e2dd9d-1072-4a28-ae1e-d780da41b593" />
+  </package>
+</logicalClassDesignerModel>
